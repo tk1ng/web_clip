@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from bs4 import BeautifulSoup
 from IPython.display import Markdown, display
 from openai import OpenAI
+from selenium import webdriver
 
 load_dotenv()
 api_key = os.getenv('OPENAI_API_KEY')
@@ -18,8 +19,11 @@ headers = {
 class Website:
     def __init__(self, url):
         self.url = url
-        response = requests.get(url, headers=headers)
-        soup = BeautifulSoup(response.content, 'html.parser')
+
+        driver = webdriver.Chrome()
+        driver.get(url)
+        website_content = driver.page_source
+        soup = BeautifulSoup(website_content, 'html.parser')
         self.title = soup.title.string if soup.title else "No title found"
         for irrelevant in soup.body(["script", "style", "img", "input"]):
             irrelevant.decompose()
