@@ -7,7 +7,7 @@ The `summarize` function receives a URL input from the user and returns a summar
 ## How to run application locally
 
 1. Clone repository by running `git clone https://github.com/tk1ng/web_clip.git` from within the directory where you wish this application to live
-2. cd into the **web_clip** git repository
+2. `cd` into the **web_clip** git repository
 3. Prior to installing the dependencies for this application, it is a good practice to configure a virtual environment for Python projects to ensure that the development environment is clean and conflict free development environment. It also helps to prevent creating conflicts from installing packages globally.
 
     - To create a virtual environment:
