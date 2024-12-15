@@ -60,3 +60,8 @@ def summarize(url):
         messages=messages
     )
     return response.choices[0].message.content
+
+
+user_request = input("Provide a webpage URL to retrieve summary: ")
+
+print(summarize(user_request))
