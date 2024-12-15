@@ -20,5 +20,5 @@ The `summarize` function receives a URL input from the user and returns a summar
 `pip install -r ./requirements.txt`
 This command installs all of the required dependencies that are documented in the **requirements.txt** file
 
-5. Final step is running the program using the command below:
+5. Final step is running the program using the following command:
 `python3 <path to file>`
